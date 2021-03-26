@@ -1,0 +1,285 @@
+/* command to run scss:
+    sass --watch nombre.scss nombre.css
+ */
+@font-face {
+  font-family: "Rajdhani-Bold";
+  src: url(./fonts/Rajdhani-Bold.ttf);
+}
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url(./fonts/PTSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Catamaran-Regular";
+  src: url(./fonts/Catamaran-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a192f;
+  color: #d4caca;
+  font-family: "PTSans-Regular";
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #0b1c35;
+  box-shadow: 0 10px 40px -10px #051530;
+  position: fixed;
+  z-index: 2;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: translateY(0px);
+  left: 0;
+  top: 0;
+}
+header ul {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin-right: 5px;
+}
+header ul li {
+  flex-basis: 25%;
+  margin: 5px;
+  padding: 10px;
+  background-color: #020e1a;
+  color: #d4caca;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+header ul li:hover {
+  background-color: #03070a;
+}
+
+header:hover {
+  visibility: visible;
+}
+
+div.ornament {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24%;
+}
+div.ornament .vertical-ornament {
+  height: 50%;
+  border-left: 1px solid #d4caca;
+  margin: 0 auto;
+}
+
+div.ornament-left {
+  position: fixed;
+  top: 0px;
+  left: 5%;
+}
+
+div.ornament-right {
+  position: fixed;
+  right: 5%;
+  display: flex;
+  padding-top: 19%;
+}
+
+div.ornament ul.tech-icons {
+  /* position: relative;
+  top: 50%; */
+  list-style: none;
+  text-align: center;
+}
+
+div.ornament ul.tech-icons li {
+  font-size: 150%;
+  margin-bottom: 11px;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 100%;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.content section {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content section.front {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.content section.front div.first-sentence h2 {
+  font-size: 200%;
+  color: rgba(67, 136, 201, 0.808);
+}
+.content section.front div.my-name h1 {
+  font-size: 550%;
+  color: #0f9e9e;
+}
+.content section.front div.my-activity h2 {
+  font-size: 400%;
+}
+.content section.front div.litle-description {
+  font-size: 150%;
+}
+
+.content section div.box-title {
+  display: flex;
+  align-items: center;
+}
+.content section div.box-title h3 {
+  flex-basis: 50%;
+  font-size: 160%;
+  font-weight: bolder;
+}
+.content section div.box-title div {
+  flex-basis: 50%;
+  border-top: 1px solid #087c7c;
+}
+.content section.about-me {
+  font-size: 120%;
+}
+.content section.about-me .box-title h3 {
+  font-family: "Rajdhani-Bold";
+}
+.content section.about-me div.container-biography {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.content section.about-me div.container-biography div.description {
+  flex-basis: 50%;
+}
+.content section.about-me div.container-biography div.image {
+  flex-basis: 50%;
+  text-align: center;
+}
+.content section.about-me div.container-biography div.image img {
+  width: 60%;
+}
+.content div.my-technologies {
+  width: 50%;
+}
+.content div.my-technologies ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: square inside;
+}
+.content div.my-technologies ul li {
+  flex-basis: 40%;
+}
+
+.content section.projects {
+  height: auto;
+  font-size: 120%;
+}
+.content section.projects .box-title h3 {
+  font-family: "Rajdhani-Bold";
+}
+.content div.container-projects div.project {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 60vh;
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 6%;
+}
+.content div.container-projects div.project h3.title-text {
+  text-align: center;
+  background-color: #e0d0d0;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.content div.container-projects div.project div.content-project {
+  display: flex;
+}
+.content div.container-projects div.project div.content-project div.tex-content {
+  margin: 0.5%;
+  padding: 10px;
+  border-radius: 7px;
+}
+.content div.container-projects div.project div.content-project div.english-content {
+  flex-basis: 50%;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #030e18;
+}
+.content div.container-projects div.project div.content-project div.spanish-content {
+  flex-basis: 50%;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  background-color: #062961;
+}
+.content div.container-projects div.project div.external-link {
+  width: 25%;
+  margin-left: 0.5%;
+  padding: 5px;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content div.container-projects div.project div.external-link a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+.content div.container-projects div.project div.external-link:hover {
+  background-color: #0ab80a;
+}
+
+.content section.contact-me {
+  font-family: "Catamaran-Regular";
+  text-align: center;
+}
+.content section.contact-me h3,
+.content section.contact-me p {
+  width: 47%;
+  margin: 0px auto;
+}
+.content section.contact-me h3.email {
+  margin-bottom: 8px;
+}
+.content section.contact-me p {
+  font-size: 130%;
+  text-align: center;
+}
+.content section.contact-me h3.opinion {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #0f9e9e;
+  margin-bottom: 17px;
+  font-size: 170%;
+}
+
+footer {
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
